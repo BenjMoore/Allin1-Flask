@@ -1,0 +1,7 @@
+Change Menu Color
+Fix Contact 
+Make Quote Contact Page
+	> Link pricing buttons to page
+Make Legal Page
+
+DONE
