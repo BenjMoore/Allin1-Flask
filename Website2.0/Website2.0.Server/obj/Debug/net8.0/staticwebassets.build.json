@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "1Izglq4xakty4KCORrIUUI687r+l4/pQeCECdmGLTnM=",
+  "Source": "Website2.0.Server",
+  "BasePath": "_content/Website2.0.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "D:\\Git Repos\\OasisInteractive.com.au\\Website2.0\\website2.0.client\\website2.0.client.esproj",
+      "Version": 2,
+      "Source": "website2.0.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
