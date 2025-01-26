@@ -13,45 +13,42 @@
     Favicons
     =============================================
     -->
-    <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ url_for('static', filename='images/favicons/apple-icon-57x57.png') }}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ url_for('static', filename='images/favicons/apple-icon-60x60.png') }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ url_for('static', filename='images/favicons/apple-icon-72x72.png') }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ url_for('static', filename='images/favicons/apple-icon-76x76.png') }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ url_for('static', filename='images/favicons/apple-icon-114x114.png') }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ url_for('static', filename='images/favicons/apple-icon-120x120.png') }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ url_for('static', filename='images/favicons/apple-icon-144x144.png') }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ url_for('static', filename='images/favicons/apple-icon-152x152.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/favicons/apple-icon-180x180.png') }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ url_for('static', filename='images/favicons/android-icon-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicons/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ url_for('static', filename='images/favicons/favicon-96x96.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicons/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="assets/images/favicons/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="{{ url_for('static', filename='images/favicons/ms-icon-144x144.png') }}">
     <meta name="theme-color" content="#ffffff">
-    <!--  
-    Stylesheets
-    =============================================
     
-    -->
-    <!-- Default stylesheets-->
-    <link href="assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Template specific stylesheets-->
+    <!-- Stylesheets -->
+    <link href="{{ url_for('static', filename='lib/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-    <link href="assets/lib/animate.css/animate.css" rel="stylesheet">
-    <link href="assets/lib/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="assets/lib/et-line-font/et-line-font.css" rel="stylesheet">
-    <link href="assets/lib/flexslider/flexslider.css" rel="stylesheet">
-    <link href="assets/lib/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet">
-    <link href="assets/lib/magnific-popup/dist/magnific-popup.css" rel="stylesheet">
-    <link href="assets/lib/simple-text-rotator/simpletextrotator.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='lib/animate.css/animate.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='lib/components-font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='lib/et-line-font/et-line-font.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='lib/flexslider/flexslider.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='lib/owl.carousel/dist/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='lib/owl.carousel/dist/assets/owl.theme.default.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='lib/magnific-popup/dist/magnific-popup.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='lib/simple-text-rotator/simpletextrotator.css') }}" rel="stylesheet">
+    
     <!-- Main stylesheet and color file-->
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link id="color-scheme" href="assets/css/colors/default.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <link id="color-scheme" href="{{ url_for('static', filename='css/colors/default.css') }}" rel="stylesheet">
+    
   </head>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
     <main>
@@ -67,111 +64,33 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            
+            <a class="navbar-brand" href="/">
+              <!--<img src="assets/images/logo-small.png" alt="Logo" style="max-width: 100px; max-height: 50px;" />-->
+            </a>
           </div>
           
           <div class="collapse navbar-collapse" id="custom-collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Home</a>
+              <li><a class="" href="#" data-toggle="">Home</a>
+              <li><a class="" href="#" data-toggle="">Create My Website!</a>
+              </li>
+              <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Software</a>
                 <ul class="dropdown-menu">
-                  <li><a href="index_mp_fullscreen_video_background.html">Default</a></li>
-                  <li><a href="index_op_fullscreen_gradient_overlay.html">One Page</a></li>
-                  <li><a href="index_agency.html">Agency</a></li>
-                  <li><a href="index_portfolio.html">Portfolio</a></li>
-                  <li><a href="index_restaurant.html">Restaurant</a></li>
-                  <li><a href="index_finance.html">Finance</a></li>
-                  <li><a href="index_landing.html">Landing Page</a></li>
-                  <li><a href="index_photography.html">Photography</a></li>
-                  <li><a href="index_shop.html">Shop</a></li>
+                  <li><a href="#">Software Consulting</a></li>
+                  <li><a href="#">Web App Development</a></li>
+                  <li><a href="#">Custom Software Development</a></li>                
                 </ul>
               </li>
-              <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Headers</a>
+              <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Engineering</a>
                 <ul class="dropdown-menu">
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Static Image Header</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="index_mp_fullscreen_static.html">Fulscreen</a></li>
-                      <li><a href="index_mp_classic_static.html">Classic</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Flexslider Header</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="index_mp_fullscreen_flexslider.html">Fulscreen</a></li>
-                      <li><a href="index_mp_classic_flexslider.html">Classic</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Video Background Header</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="index_mp_fullscreen_video_background.html">Fulscreen</a></li>
-                      <li><a href="index_mp_classic_video_background.html">Classic</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Text Rotator Header</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="index_mp_fullscreen_text_rotator.html">Fulscreen</a></li>
-                      <li><a href="index_mp_classic_text_rotator.html">Classic</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Gradient Overlay Header</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="index_mp_fullscreen_gradient_overlay.html">Fulscreen</a></li>
-                      <li><a href="index_mp_classic_gradient_overlay.html">Classic</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Pages</a>
-                <ul class="dropdown-menu">
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">About</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="about1.html">About 1</a></li>
-                      <li><a href="about2.html">About 2</a></li>
-                      <li><a href="about3.html">About 3</a></li>
-                      <li><a href="about4.html">About 4</a></li>
-                      <li><a href="about5.html">About 5</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Services</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="service1.html">Service 1</a></li>
-                      <li><a href="service2.html">Service 2</a></li>
-                      <li><a href="service3.html">Service 3</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Pricing</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="pricing1.html">Pricing 1</a></li>
-                      <li><a href="pricing2.html">Pricing 2</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Gallery</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="gallery_col_2.html">2 Columns</a></li>
-                      <li><a href="gallery_col_3.html">3 Columns</a></li>
-                      <li><a href="gallery_col_4.html">4 Columns</a></li>
-                      <li><a href="gallery_col_6.html">6 Columns</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Contact</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="contact1.html">Contact 1</a></li>
-                      <li><a href="contact2.html">Contact 2</a></li>
-                      <li><a href="contact3.html">Contact 3</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Restaurant menu</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="restaurant_menu1.html">Menu 2 Columns</a></li>
-                      <li><a href="restaurant_menu2.html">Menu 3 Columns</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="login_register.html">Login / Register</a></li>
-                  <li><a href="faq.html">FAQ</a></li>
-                  <li><a href="404.html">Page 404</a></li>
+                <li><a href="#">Engineering Consulting</a></li>
+                <li><a href="#">CAD Design</a></li>
+                <li><a href="#">3d Print On Demand</a></li>
                 </ul>
               </li>
               <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Portfolio</a>
                 <ul class="dropdown-menu" role="menu">
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Boxed</a>
+                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Ongoing Projects</a>
                     <ul class="dropdown-menu">
                       <li><a href="portfolio_boxed_col_2.html">2 Columns</a></li>
                       <li><a href="portfolio_boxed_col_3.html">3 Columns</a></li>
@@ -362,14 +281,14 @@
           </div>
         </div>
       </nav>
-      <section class="home-section home-parallax home-fade home-full-height bg-dark-60 agency-page-header" id="home" data-background="assets/images/indexx.jpg">
+      <section class="home-section home-parallax home-fade home-full-height bg-dark-60 agency-page-header" id="home" data-background="{{ url_for('static', filename='images/indexx.jpg') }}">
         <div class="titan-caption">
             <div class="caption-content">
                 <!-- Change the text color using Bootstrap text utility classes -->
                 <div class="font-alt mb-30 titan-title-size-2 ext-secondary">             
-                  <img src="assets/images/LogoWhite.png" alt="TheOasis" style="height: 40rem;">
+                  <img src="{{ url_for('static', filename='images/LogoWhite.png') }}" alt="TheOasis" style="height: 40rem;">
               </div> <!-- Light text color -->
-                <div class="font-alt bold mb-40 titan-title-size-4 text-secondary">Make business <span class="rotate">easy | simple | flexible</span></div> <!-- Yellow text color -->
+                <div class="font-alt bold mb-40 titan-title-size-4 text-secondary">Make business <span class="rotate">easy | simple | flexible | work</span></div> <!-- Yellow text color -->
                 <a class="section-scroll btn btn-border-w btn-circle text-info" href="#about">Learn More</a> <!-- Blue text color -->
             </div>
         </div>
@@ -404,7 +323,7 @@
                 <div class="features-item">
                   <div class="features-icon"><span class="icon-lifesaver"></span></div>
                   <h3 class="features-title font-alt">Ongoing Support</h3>
-                  <p>Reliable and responsive support ensures your website continues to perform at its best.</p>
+                  <p>Reliable and responsive support ensures your software continues to perform at its best.</p>
                 </div>
               </div>
             </div>
@@ -448,117 +367,180 @@
               </div>
             </div>
             <ul class="works-grid works-grid-gut works-grid-3 works-hover-d" id="works-grid">
-              <li class="work-item illustration webdesign"><a href="portfolio_single_featured_image1.html">
-                  <div class="work-image"><img src="assets/images/portfolio/grid-portfolio1.jpg" alt="Portfolio Item"/></div>
-                  <div class="work-caption font-alt">
-                    <h3 class="work-title">Corporate Identity</h3>
-                    <div class="work-descr">Illustration</div>
-                  </div></a></li>
-              <li class="work-item marketing photography"><a href="portfolio_single_featured_image2.html">
-                  <div class="work-image"><img src="assets/images/portfolio/grid-portfolio2.jpg" alt="Portfolio Item"/></div>
-                  <div class="work-caption font-alt">
-                    <h3 class="work-title">Bag MockUp</h3>
-                    <div class="work-descr">Marketing</div>
-                  </div></a></li>
-              <li class="work-item illustration photography"><a href="portfolio_single_featured_slider1.html">
-                  <div class="work-image"><img src="assets/images/portfolio/grid-portfolio3.jpg" alt="Portfolio Item"/></div>
-                  <div class="work-caption font-alt">
-                    <h3 class="work-title">Disk Cover</h3>
-                    <div class="work-descr">Illustration</div>
-                  </div></a></li>
-              <li class="work-item marketing photography"><a href="portfolio_single_featured_slider2.htmll">
-                  <div class="work-image"><img src="assets/images/portfolio/grid-portfolio4.jpg" alt="Portfolio Item"/></div>
-                  <div class="work-caption font-alt">
-                    <h3 class="work-title">Business Card</h3>
-                    <div class="work-descr">Photography</div>
-                  </div></a></li>
-              <li class="work-item illustration webdesign"><a href="portfolio_single_featured_video1.html">
-                  <div class="work-image"><img src="assets/images/portfolio/grid-portfolio5.jpg" alt="Portfolio Item"/></div>
-                  <div class="work-caption font-alt">
-                    <h3 class="work-title">Web Design</h3>
-                    <div class="work-descr">Webdesign</div>
-                  </div></a></li>
-              <li class="work-item marketing webdesign"><a href="portfolio_single_featured_video2.html">
-                  <div class="work-image"><img src="assets/images/portfolio/grid-portfolio6.jpg" alt="Portfolio Item"/></div>
-                  <div class="work-caption font-alt">
-                    <h3 class="work-title">Paper clip</h3>
-                    <div class="work-descr">Marketing</div>
-                  </div></a></li>
+              <li class="work-item illustration webdesign">
+                  <a href="/">
+                      <div class="work-image">
+                          <img src="{{ url_for('static', filename='images/portfolio/grid-portfolio1.jpg') }}" alt="Portfolio Item" />
+                      </div>
+                      <div class="work-caption font-alt">
+                          <h3 class="work-title">Corporate Identity</h3>
+                          <div class="work-descr">Illustration</div>
+                      </div>
+                  </a>
+              </li>
+              <li class="work-item marketing photography">
+                  <a href="/">
+                      <div class="work-image">
+                          <img src="{{ url_for('static', filename='images/portfolio/grid-portfolio2.jpg') }}" alt="Portfolio Item" />
+                      </div>
+                      <div class="work-caption font-alt">
+                          <h3 class="work-title">Bag MockUp</h3>
+                          <div class="work-descr">Marketing</div>
+                      </div>
+                  </a>
+              </li>
+              <li class="work-item illustration photography">
+                  <a href="/">
+                      <div class="work-image">
+                          <img src="{{ url_for('static', filename='images/portfolio/grid-portfolio3.jpg') }}" alt="Portfolio Item" />
+                      </div>
+                      <div class="work-caption font-alt">
+                          <h3 class="work-title">Disk Cover</h3>
+                          <div class="work-descr">Illustration</div>
+                      </div>
+                  </a>
+              </li>
+              <li class="work-item marketing photography">
+                  <a href="/">
+                      <div class="work-image">
+                          <img src="{{ url_for('static', filename='images/portfolio/grid-portfolio4.jpg') }}" alt="Portfolio Item" />
+                      </div>
+                      <div class="work-caption font-alt">
+                          <h3 class="work-title">Business Card</h3>
+                          <div class="work-descr">Photography</div>
+                      </div>
+                  </a>
+              </li>
+              <li class="work-item illustration webdesign">
+                  <a href="/">
+                      <div class="work-image">
+                          <img src="{{ url_for('static', filename='images/portfolio/grid-portfolio5.jpg') }}" alt="Portfolio Item" />
+                      </div>
+                      <div class="work-caption font-alt">
+                          <h3 class="work-title">Web Design</h3>
+                          <div class="work-descr">Webdesign</div>
+                      </div>
+                  </a>
+              </li>
+              <li class="work-item marketing webdesign">
+                  <a href="/">
+                      <div class="work-image">
+                          <img src="{{ url_for('static', filename='images/portfolio/grid-portfolio6.jpg') }}" alt="Portfolio Item" />
+                      </div>
+                      <div class="work-caption font-alt">
+                          <h3 class="work-title">Paper clip</h3>
+                          <div class="work-descr">Marketing</div>
+                      </div>
+                  </a>
+              </li>
+          </ul>
+          
             </ul>
           </div>
         </section>
         <section class="module-small bg-dark">
           <div class="container">
-            <div class="row">
-              <div class="col-sm-6 col-md-8 col-lg-6 col-lg-offset-2">
-                <div class="callout-text font-alt">
-                  <h3 class="callout-title">Want to see more works?</h3>
-                  <p>We are always open to interesting projects.</p>
-                </div>
+              <div class="row">
+                  <div class="col-sm-6 col-md-8 col-lg-6 col-lg-offset-2">
+                      <div class="callout-text font-alt">
+                          <h3 class="callout-title">Want to see more works?</h3>
+                          <p>We are always open to interesting projects.</p>
+                      </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-lg-2">
+                      <div class="callout-btn-box">
+                          <a class="btn btn-w btn-round" href="/">
+                              Let's view portfolio
+                          </a>
+                      </div>
+                  </div>
               </div>
-              <div class="col-sm-6 col-md-4 col-lg-2">
-                <div class="callout-btn-box"><a class="btn btn-w btn-round" href="portfolio_boxed_gutter_col_3.html">Lets view portfolio</a></div>
-              </div>
-            </div>
           </div>
-        </section>
-        <section class="module" id="team">
+      </section>
+      <section class="module" id="team">
           <div class="container">
-            <div class="row">
-              <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">Meet Our Team</h2>
-                <div class="module-subtitle font-serif">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</div>
+              <div class="row">
+                  <div class="col-sm-6 col-sm-offset-3">
+                      <h2 class="module-title font-alt">Meet Our Team</h2>
+                      <div class="module-subtitle font-serif">
+                          A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.
+                      </div>
+                  </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="mb-sm-20 wow fadeInUp col-md-4 col-sm-6 col-xs-12" onclick="wow fadeInUp">
-                <div class="team-item">
-                  <div class="team-image"><img src="assets/images/team-1.jpg" alt="Member Photo"/>
-                    <div class="team-detail">
-                      <h5 class="font-alt">Hi all</h5>
-                      <p class="font-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit lacus, a&amp;nbsp;iaculis diam.</p>
-                      <div class="team-social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a><a href="#"><i class="fa fa-skype"></i></a></div>
-                    </div>
+              <div class="row">
+                  <div class="mb-sm-20 wow fadeInUp col-md-4 col-sm-6 col-xs-12">
+                      <div class="team-item">
+                          <div class="team-image">
+                              <img src="{{ url_for('static', filename='images/team-1.jpg') }}" alt="Member Photo" />
+                              <div class="team-detail">
+                                  <h5 class="font-alt">Hi all</h5>
+                                  <p class="font-serif">
+                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit lacus, a&nbsp;iaculis diam.
+                                  </p>
+                                  <div class="team-social">
+                                      <a href="#"><i class="fa fa-facebook"></i></a>
+                                      <a href="#"><i class="fa fa-twitter"></i></a>
+                                      <a href="#"><i class="fa fa-dribbble"></i></a>
+                                      <a href="#"><i class="fa fa-skype"></i></a>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="team-descr font-alt">
+                              <div class="team-name">Jim Stone</div>
+                              <div class="team-role">Art Director</div>
+                          </div>
+                      </div>
                   </div>
-                  <div class="team-descr font-alt">
-                    <div class="team-name">Jim Stone</div>
-                    <div class="team-role">Art Director</div>
+                  <div class="mb-sm-20 wow fadeInUp col-md-4 col-sm-6 col-xs-12">
+                      <div class="team-item">
+                          <div class="team-image">
+                              <img src="{{ url_for('static', filename='images/team-2.jpg') }}" alt="Member Photo" />
+                              <div class="team-detail">
+                                  <h5 class="font-alt">Good day</h5>
+                                  <p class="font-serif">
+                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit lacus, a&nbsp;iaculis diam.
+                                  </p>
+                                  <div class="team-social">
+                                      <a href="#"><i class="fa fa-facebook"></i></a>
+                                      <a href="#"><i class="fa fa-twitter"></i></a>
+                                      <a href="#"><i class="fa fa-dribbble"></i></a>
+                                      <a href="#"><i class="fa fa-skype"></i></a>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="team-descr font-alt">
+                              <div class="team-name">Andy River</div>
+                              <div class="team-role">Creative Director</div>
+                          </div>
+                      </div>
                   </div>
-                </div>
+                  <div class="mb-sm-20 wow fadeInUp col-md-4 col-sm-6 col-xs-12">
+                      <div class="team-item">
+                          <div class="team-image">
+                              <img src="{{ url_for('static', filename='images/team-4.jpg') }}" alt="Member Photo" />
+                              <div class="team-detail">
+                                  <h5 class="font-alt">Yes, it's me</h5>
+                                  <p class="font-serif">
+                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit lacus, a&nbsp;iaculis diam.
+                                  </p>
+                                  <div class="team-social">
+                                      <a href="#"><i class="fa fa-facebook"></i></a>
+                                      <a href="#"><i class="fa fa-twitter"></i></a>
+                                      <a href="#"><i class="fa fa-dribbble"></i></a>
+                                      <a href="#"><i class="fa fa-skype"></i></a>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="team-descr font-alt">
+                              <div class="team-name">Dylan Woods</div>
+                              <div class="team-role">Developer</div>
+                          </div>
+                      </div>
+                  </div>
               </div>
-              <div class="mb-sm-20 wow fadeInUp col-md-4 col-sm-6 col-xs-12" onclick="wow fadeInUp">
-                <div class="team-item">
-                  <div class="team-image"><img src="assets/images/team-2.jpg" alt="Member Photo"/>
-                    <div class="team-detail">
-                      <h5 class="font-alt">Good day</h5>
-                      <p class="font-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit lacus, a&amp;nbsp;iaculis diam.</p>
-                      <div class="team-social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a><a href="#"><i class="fa fa-skype"></i></a></div>
-                    </div>
-                  </div>
-                  <div class="team-descr font-alt">
-                    <div class="team-name">Andy River</div>
-                    <div class="team-role">Creative director</div>
-                  </div>
-                </div>
-              </div>
-              <div class="mb-sm-20 wow fadeInUp col-md-4 col-sm-6 col-xs-12" onclick="wow fadeInUp">
-                <div class="team-item">
-                  <div class="team-image"><img src="assets/images/team-4.jpg" alt="Member Photo"/>
-                    <div class="team-detail">
-                      <h5 class="font-alt">Yes, it's me</h5>
-                      <p class="font-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit lacus, a&amp;nbsp;iaculis diam.</p>
-                      <div class="team-social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a><a href="#"><i class="fa fa-skype"></i></a></div>
-                    </div>
-                  </div>
-                  <div class="team-descr font-alt">
-                    <div class="team-name">Dylan Woods</div>
-                    <div class="team-role">Developer</div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
-        </section>
+      </section>
+      
         <hr class="divider-w">
         <section class="module">
           <div class="container">
@@ -640,7 +622,7 @@
             </div>
           </div>
         </section>
-        <section class="module bg-dark-60 pt-0 pb-0 parallax-bg testimonial" data-background="assets/images/testimonial_bg.jpg">
+        <section class="module bg-dark-60 pt-0 pb-0 parallax-bg testimonial" data-background="{{ url_for('static', filename='images/testimonial_bg.jpg') }}">
           <div class="testimonials-slider pt-140 pb-140">
             <ul class="slides">
               <li>
@@ -728,7 +710,7 @@
             </div>
             <div class="row">
               <div class="col-sm-8">
-                <form id="contactForm" role="form" method="post" action="php/contact.php">
+                <form id="contactForm" role="form" method="post" action="{{ url_for('static', filename='php/contact.php') }}">
                   <div class="form-group">
                     <label class="sr-only" for="name">Name</label>
                     <input class="form-control" type="text" id="name" name="name" placeholder="Your Name*" required="required" data-validation-required-message="Please enter your name."/>
@@ -802,14 +784,14 @@
                   <h5 class="widget-title font-alt">Popular Posts</h5>
                   <ul class="widget-posts">
                     <li class="clearfix">
-                      <div class="widget-posts-image"><a href="#"><img src="assets/images/rp-1.jpg" alt="Post Thumbnail"/></a></div>
+                      <div class="widget-posts-image"><a href="#"><img src="{{ url_for('static', filename='images/rp-1.jpg') }}" alt="Post Thumbnail"/></a></div>
                       <div class="widget-posts-body">
                         <div class="widget-posts-title"><a href="#">Designer Desk Essentials</a></div>
                         <div class="widget-posts-meta">23 january</div>
                       </div>
                     </li>
                     <li class="clearfix">
-                      <div class="widget-posts-image"><a href="#"><img src="assets/images/rp-2.jpg" alt="Post Thumbnail"/></a></div>
+                      <div class="widget-posts-image"><a href="#"><img src="{{ url_for('static', filename='images/rp-2.jpg') }}" alt="Post Thumbnail"/></a></div>
                       <div class="widget-posts-body">
                         <div class="widget-posts-title"><a href="#">Realistic Business Card Mockup</a></div>
                         <div class="widget-posts-meta">15 February</div>
@@ -826,7 +808,7 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6">
-                <p class="copyright font-alt">&copy; 2017&nbsp;<a href="index.html">TitaN</a>, All Rights Reserved</p>
+                <p class="copyright font-alt">&copy; 2017&nbsp;<a href="/">TitaN</a>, All Rights Reserved</p>
               </div>
               <div class="col-sm-6">
                 <div class="footer-social-links"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a><a href="#"><i class="fa fa-skype"></i></a>
@@ -842,18 +824,19 @@
     JavaScripts
     =============================================
     -->
-    <script src="assets/lib/jquery/dist/jquery.js"></script>
-    <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="assets/lib/wow/dist/wow.js"></script>
-    <script src="assets/lib/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.js"></script>
-    <script src="assets/lib/isotope/dist/isotope.pkgd.js"></script>
-    <script src="assets/lib/imagesloaded/imagesloaded.pkgd.js"></script>
-    <script src="assets/lib/flexslider/jquery.flexslider.js"></script>
-    <script src="assets/lib/owl.carousel/dist/owl.carousel.min.js"></script>
-    <script src="assets/lib/smoothscroll.js"></script>
-    <script src="assets/lib/magnific-popup/dist/jquery.magnific-popup.js"></script>
-    <script src="assets/lib/simple-text-rotator/jquery.simple-text-rotator.min.js"></script>
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="{{ url_for('static', filename='lib/jquery/dist/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/wow/dist/wow.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/isotope/dist/isotope.pkgd.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/imagesloaded/imagesloaded.pkgd.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/flexslider/jquery.flexslider.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/owl.carousel/dist/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/smoothscroll.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/magnific-popup/dist/jquery.magnific-popup.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/simple-text-rotator/jquery.simple-text-rotator.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/plugins.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    
   </body>
 </html>
