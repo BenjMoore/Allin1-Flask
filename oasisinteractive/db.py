@@ -7,7 +7,7 @@ from werkzeug.security import generate_password_hash
 logging.basicConfig(level=logging.INFO)
 
 # MongoDB connection
-MONGO_URI = os.getenv("MONGO_URI", "mongodb+srv://APIUSER:Monkeyman30@developmentserver.0jw3v.mongodb.net/?retryWrites=true&w=majority&appName=DevelopmentServer")
+MONGO_URI = os.getenv("MONGO_URI", "mongodb+srv://APIUSER:9JnmArYfLRB9oYAs@developmentserver.0jw3v.mongodb.net/?retryWrites=true&w=majority&appName=DevelopmentServer")
 client = MongoClient(MONGO_URI)
 db = client["oasis"]
 users_collection = db["users"]

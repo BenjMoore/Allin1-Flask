@@ -12,30 +12,6 @@ cloud_bp = Blueprint("Cloud", __name__)
 BASE_DIR = os.path.join(os.path.dirname(__file__), "root")
 os.makedirs(BASE_DIR, exist_ok=True)
 
-######## DB ###########
-MONGO_URI = os.getenv("MONGO_URI", "mongodb+srv://APIUSER:Monkeyman30@developmentserver.0jw3v.mongodb.net/?retryWrites=true&w=majority&appName=DevelopmentServer")  # Default to local MongoDB if not set
-
-def getFileAccess(username):
-    # Find the user document by username
-    db = get_db()
-    user = db.find_one({"username": username})
-    
-    if user:
-        # Access levels are stored as a list in the 'access_levels' field
-        access_levels = user.get('fileAccess', [])  # Default to an empty list if not found
-        return access_levels
-    else:
-        return []  # Return an empty list if the user doesn't exist
-
-def get_db():
-    """
-    Returns a MongoDB database connection using the Mongo URI.
-    """
-    client = MongoClient(MONGO_URI)
-    db = client.get_database("oasis")  
-    return db
-################
-  
 # Helper function to list the files and folders inside a directory
 def list_directory(path=BASE_DIR):
     items = []

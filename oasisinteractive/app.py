@@ -22,7 +22,7 @@ from wtforms.validators import DataRequired
 from cloud import cloud_bp
 from forms import DeleteForm, UploadForm
 import os
-
+import utility.usermanager as usermanager
 
 class LoginForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
@@ -54,6 +54,8 @@ def home():
 @app.route("/Auth/Login", methods=["GET", "POST"])
 def login():
     form = LoginForm()  # Create an instance of the form
+    #print(usermanager.checkFileAccess("NewFolder"))
+  
     if form.validate_on_submit():  # Automatically checks for CSRF and field validation
         username = form.username.data
         password = form.password.data
@@ -61,7 +63,7 @@ def login():
         user = get_user(username)
         ## Login Function
         if user and check_password_hash(user["password"], password):
-            session["username"] = username
+            session["username"] = username          
             session["loggedIn"] = True
             session["role"] = user["role"]          
             flash("Login successful!", "success")
@@ -131,7 +133,7 @@ def softwareCloud():
 ## App Functions ##
 
 # DB #
-MONGO_URI = os.getenv("MONGO_URI", "mongodb+srv://APIUSER:Monkeyman30@developmentserver.0jw3v.mongodb.net/?retryWrites=true&w=majority&appName=DevelopmentServer")  # Default to local MongoDB if not set
+MONGO_URI = os.getenv("MONGO_URI", "mongodb+srv://APIUSER:9JnmArYfLRB9oYAs@developmentserver.0jw3v.mongodb.net/?retryWrites=true&w=majority&appName=DevelopmentServer")  # Default to local MongoDB if not set
 
 def get_db():
     """
