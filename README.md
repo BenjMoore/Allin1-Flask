@@ -6,3 +6,7 @@ Flask Web Portal being built for Oasis Interactive, This code is open source and
 > Reverse Proxy (Kinda) (Access and brodcast http(s), ssh and other connection types from a local server and access it remotely from the portal without exposing the app itself to a public network) |
 > User management |
 > and more....
+
+
+
+THIS APPLICATION IS INSECURE AT THIS POINT 
