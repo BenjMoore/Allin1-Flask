@@ -1,4 +1,4 @@
-Flask Web Portal being built for Oasis Interactive, This code is open source and can be reused by anyone if desired. MIT licence applys. This application is still in early development but features will include
+Flask Web Portal being built for Oasis Interactive but could be general purpose, This code is open source and can be reused by anyone if desired. MIT licence applys. This application is still in early development but features will include
 
 
 > Cloud Storage (v1 working) |
