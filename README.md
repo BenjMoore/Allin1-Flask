@@ -10,3 +10,5 @@ Flask Web Portal being built for Oasis Interactive but could be general purpose,
 
 
 THIS APPLICATION IS INSECURE AT THIS POINT 
+THE Mongo Server is whitelisted, change it to your own
+This project is in active development and updates will be made
