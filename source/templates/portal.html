@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}  
+      <div class="main">
+        <section class="module bg-dark-60 portfolio-page-header" data-background="{{ url_for('static', filename='images/portalbg.jpg') }}">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6 col-sm-offset-3">
+                <h2 class="module-title font-alt">Portal</h2>
+                <div class="module-subtitle font-serif">The homepage for all Oasis application</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="module pb-0">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <ul class="filter font-alt" id="filters">
+                  <li><a class="current wow fadeInUp" href="#" data-filter="*">All</a></li>
+                  <li><a class="wow fadeInUp" href="#" data-filter=".tools" data-wow-delay="0.2s">Tools</a></li>
+                  <li><a class="wow fadeInUp" href="#" data-filter=".software" data-wow-delay="0.4s">Software</a></li>
+                  <li><a class="wow fadeInUp" href="#" data-filter=".admin" data-wow-delay="0.6s">Admin</a></li>
+                  <li><a class="wow fadeInUp" href="#" data-filter=".misc" data-wow-delay="0.6s">Misc</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <ul class="works-grid works-grid-gut works-hover-w works-grid-3" id="works-grid">
+            <li class="work-item tools admin"><a href="/Accounts/Manage">
+                <div class="work-image"><img src="{{ url_for('static', filename='images/portalaccountmanage.jpg') }}" alt="Portfolio Item"/></div>
+                <div class="work-caption font-alt">
+                  <h3 class="work-title">Account Manager</h3>
+                  <div class="work-descr">Account</div>
+                </div></a></li>
+            <li class="work-item software tools"><a href="/Tools/Network">
+                <div class="work-image"><img src="{{ url_for('static', filename='images/networktools.jpg') }}" alt="Portfolio Item"/></div>
+                <div class="work-caption font-alt">
+                  <h3 class="work-title">Network</h3>
+                  <div class="work-descr">Tools</div>
+                </div></a></li>
+            <li class="work-item tools software"><a href="/Software/Cloud">
+                <div class="work-image"><img src="{{ url_for('static', filename='images/cloudportal.jpg') }}" alt="Portfolio Item"/></div>
+                <div class="work-caption font-alt">
+                  <h3 class="work-title">Cloud Storage</h3>
+                  <div class="work-descr">Sotware</div>
+                </div></a></li>
+            
+          </ul>
+        </section>
+   {% endblock %}

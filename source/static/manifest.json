@@ -1,0 +1,11 @@
+{
+    "short_name": "ThoasConsulting",
+    "name": "ThoasIsInteractive Consulting Portal",
+    "description": "A portal for client interactions, support, and resources by ThoasIsInteractive.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#f8f9fa",
+    "theme_color": "#007bff"
+   
+  }
+  

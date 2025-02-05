@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section class="module bg-dark-30" data-background="{{ url_for('static', filename='images/gradient.jpg') }}">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <h1 class="module-title font-alt mb-0">Cloud Storage v1.1</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Flash Messages -->
+{% with message = get_flashed_messages(with_categories=true) %}
+    {% if message %}
+        <div class="alert alert-{{ message[0][0] }} mt-3">
+            <p>{{ message[0][1] }}</p>
+        </div>
+    {% endif %}
+{% endwith %}
+
+<div class="container pt-4 pb-5"> <!-- Added pb-5 for more space at the bottom -->
+    <h3 class="mb-4">📂 File Browser</h3>
+
+    <div class="d-flex gap-3 mb-4">
+        <a href="{{ url_for('Cloud.create_folder') }}" class="btn btn-primary">➕ Create New Folder</a>
+        <a href="{{ url_for('Cloud.upload_page') }}" class="btn btn-success">⬆️ Upload File</a>
+    </div>
+
+    <!-- 📌 Folder Navigation (Breadcrumb) -->
+    <div class="mt-4">
+        <ol class="breadcrumb bg-light p-2 rounded">
+            <li class="breadcrumb-item">
+                <a href="{{ url_for('Cloud.list_files', folder='') }}">🏠 Root</a>
+            </li>
+            {% set path_parts = folder.replace('\\', '/').split('/') %}
+            {% for i in range(path_parts|length) %}
+                <li class="breadcrumb-item">
+                    <a href="{{ url_for('Cloud.list_files', folder='/'.join(path_parts[:i+1])) }}">
+                        📁 {{ path_parts[i] }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ol>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        {% for file in files %}
+            <div class="col-md-3 mb-4">
+                <div class="card shadow-sm py-7 px-2"> <!-- Adjusted padding here -->
+                    <div class="card-body text-center">
+                        {% if file.type == 'folder' %}
+                            <h5 class="card-title">📁 {{ file.name }}</h5>
+                            <a href="{{ url_for('Cloud.list_files', folder=file.path) }}" class="btn btn-outline-secondary btn-sm mb-2">🔍 Open</a>
+                            <form method="POST" action="{{ url_for('Cloud.delete_folder') }}">
+                                {{ delete_form.hidden_tag() }}
+                                <input type="hidden" name="folder" value="{{ file.path }}">
+                                <button type="submit" class="btn btn-outline-danger btn-sm">🗑️ Delete</button>
+                            </form>
+                        {% else %}
+                            <h5 class="card-title">📄 {{ file.name }}</h5>
+                            <p><small class="text-muted">({{ file.type }})</small></p>
+                            <a href="{{ url_for('Cloud.download_file', filename=file.path) }}" class="btn btn-outline-secondary btn-sm mb-2" download>⬇️ Download</a>
+                            <form method="POST" action="{{ url_for('Cloud.delete_item') }}">
+                                {{ delete_form.hidden_tag() }}
+                                <input type="hidden" name="path" value="{{ file.path }}">
+                                <button type="submit" class="btn btn-outline-danger btn-sm">🗑️ Delete</button>
+                            </form>
+                            
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+<br>
+<br>
+<br>
+{% endblock %}

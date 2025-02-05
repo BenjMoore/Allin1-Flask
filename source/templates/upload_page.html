@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="module bg-dark-30" data-background="{{ url_for('static', filename='images/gradient.jpg') }}">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <h1 class="module-title font-alt mb-0">Upload File</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container pt-4 mt-4">
+    <h3>Upload a File</h3>
+    <form method="POST" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        <div class="mb-3">
+            {{ form.file.label(class="form-label") }}
+            {{ form.file(class="form-control") }}
+        </div>
+        <div class="mb-3">
+            {{ form.folder.label(class="form-label") }}
+            <select class="form-control" name="folder">
+                <option value="" {% if current_folder == '' %}selected{% endif %}>Root</option>
+                {% for folder in folders %}
+                    <option value="{{ folder }}" {% if current_folder == folder %}selected{% endif %}>{{ folder }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <button type="submit" class="btn btn-success">Upload</button>
+    </form>
+</div>
+
+{% endblock %}
