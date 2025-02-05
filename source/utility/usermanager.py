@@ -8,8 +8,9 @@ Functions
 > Check Role
 > Set Role
 '''
+from db import get_user
 from flask import session
-from app import get_db, get_user
+
 
 def checkFileAccess(filepath):
     username = session.get("username")
