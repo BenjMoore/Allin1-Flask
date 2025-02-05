@@ -41,7 +41,7 @@ app.config['DEBUG'] = True
 # Register Cloud Service
 app.register_blueprint(cloud_bp, url_prefix="/cloud")
 
-csrf = CSRFProtect(app)
+#csrf = CSRFProtect(app)
 Session(app)
 
 # Routes
