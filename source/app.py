@@ -71,8 +71,9 @@ def login():
         else:
             flash("Invalid username or password.", "danger")
 
-    if "loggedIn" in session:
+    if "loggedIn" in session:    
         return redirect(url_for("portal"))
+        
     
     return render_template("login.html", form=form)  # Pass the form to the template
 
@@ -151,18 +152,6 @@ def get_user(username):
     user = db.users.find_one({"username": username})  # Assuming "users" is the collection name
     return user
 
-def getAccessLevel(username):
-    # Find the user document by username
-    db = get_db()
-    user = db.find_one({"username": username})
-    
-    if user:
-        # Access levels are stored as a list in the 'access_levels' field
-        access_levels = user.get('accessLevel', [])  # Default to an empty list if not found
-        return access_levels
-    else:
-        return []  # Return an empty list if the user doesn't exist
-    
 
 if __name__ == "__main__":
     app.run(debug=True)
